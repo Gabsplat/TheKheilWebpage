@@ -26,6 +26,7 @@ Proyecto de página web hecha para 'The Kheil'
 
 ### *API Endpoints*:
 **Cards**:
+
 *All* cards -> `/api?cards=1`
 
 Cards by *character* -> `/api?cards=1&character=X`
@@ -33,7 +34,9 @@ Cards by *character* -> `/api?cards=1&character=X`
 Cards by *type* -> `/api?cards=1&tipocarta=X`
 
 Cards by *character and type* -> `/api?cards=1&character=X&tipocarta=Y`
+
 **Chapters**:
+
 *All* chapters -> `/api?chapters=1`
 
 Chapters by *character* -> `/api?chapters=1&character=X`
