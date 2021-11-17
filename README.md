@@ -8,22 +8,22 @@ Proyecto de página web hecha para 'The Kheil'
 	 - Dropdown (Select) -> **[React-Select](https://react-select.com/)** 
 
 ### *Usage*:
-#### *React start commands*
- **Start Project** -> `npm run start-craco`
+**React start commands**
+*Start Project* -> `npm run start-craco`
 
-**Build Project** -> `npm run build-craco` 
+*Build Project* -> `npm run build-craco` 
 
-#### *Config files and information*
-**Styling Config** -> `tailwind.config.css` 
+**Config files and information**
+*Styling Config* -> `tailwind.config.css` 
 
-**Package Config** -> `http://thekheil.com` homepage and proxy 
+*Package Config* -> `http://thekheil.com` homepage and proxy 
 	 
 ## Backend
 ### *Stack*:
 **PHP** and **MySQL**
 
 ### *API Endpoints*:
-#### Cards:
+#### **Cards:
 **All** cards -> `/api?cards=1`
 
 Cards by **character** -> `/api?cards=1&character=X`
@@ -31,7 +31,7 @@ Cards by **character** -> `/api?cards=1&character=X`
 Cards by **type** -> `/api?cards=1&tipocarta=X`
 
 Cards by **character and type** -> `/api?cards=1&character=X&tipocarta=Y`
-#### Chapters:
+#### **Chapters**:
 **All** chapters -> `/api?chapters=1`
 
 Chapters by **character** -> `/api?chapters=1&character=X`
