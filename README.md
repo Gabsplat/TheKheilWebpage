@@ -9,11 +9,13 @@ Proyecto de página web hecha para 'The Kheil'
 
 ### *Usage*:
 **React start commands**
+
 *Start Project* -> `npm run start-craco`
 
 *Build Project* -> `npm run build-craco` 
 
 **Config files and information**
+
 *Styling Config* -> `tailwind.config.css` 
 
 *Package Config* -> `http://thekheil.com` homepage and proxy 
@@ -23,19 +25,19 @@ Proyecto de página web hecha para 'The Kheil'
 **PHP** and **MySQL**
 
 ### *API Endpoints*:
-#### **Cards:
-**All** cards -> `/api?cards=1`
+**Cards**:
+*All* cards -> `/api?cards=1`
 
-Cards by **character** -> `/api?cards=1&character=X`
+Cards by *character* -> `/api?cards=1&character=X`
 
-Cards by **type** -> `/api?cards=1&tipocarta=X`
+Cards by *type* -> `/api?cards=1&tipocarta=X`
 
-Cards by **character and type** -> `/api?cards=1&character=X&tipocarta=Y`
-#### **Chapters**:
-**All** chapters -> `/api?chapters=1`
+Cards by *character and type* -> `/api?cards=1&character=X&tipocarta=Y`
+**Chapters**:
+*All* chapters -> `/api?chapters=1`
 
-Chapters by **character** -> `/api?chapters=1&character=X`
+Chapters by *character* -> `/api?chapters=1&character=X`
 
-Chapters by **book** -> `/api?chapters=1&libro=X`
+Chapters by *book* -> `/api?chapters=1&libro=X`
 
-Chapters by **character and book** -> `/api?chapters=1&character=X&libro=Y`
+Chapters by *character and book* -> `/api?chapters=1&character=X&libro=Y`
