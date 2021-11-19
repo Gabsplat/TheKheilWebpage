@@ -18,7 +18,7 @@ Proyecto de página web hecha para 'The Kheil'
 
 *Styling Config* -> `tailwind.config.css` 
 
-*Package Config* -> `http://thekheil.com` homepage and proxy 
+*Package Config* -> `https://thekheil.com` homepage and proxy 
 	 
 ## Backend
 ### *Stack*:
