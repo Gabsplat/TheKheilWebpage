@@ -6,6 +6,7 @@ import Img from '../components/Img'
 
 /* SVGS */
 import OpenSeaLogo from '../assets/imgs/svg/opensea.svg'
+import DriveLogo from '../assets/imgs/svg/google-drive.svg'
 import BackButton from '../assets/imgs/svg/back-button.svg'
 
 /* IMGS */
@@ -21,7 +22,7 @@ function Chapter() {
         console.log(search);
         if(search.state !== undefined){
             setChapterData(JSON.parse(search.state.data));
-            console.log(search.state.data)
+            console.log(search.state.data);
         } else{
             let characterId = search.pathname.split('/')[2]
             fetchChapterById(characterId);
@@ -36,6 +37,7 @@ function Chapter() {
                     history.push("/chapters");
                 } else{
                     setChapterData(data[0]);
+                    console.log(search.state.data);
                 }
             })
             .catch(err => console.error(err));
@@ -56,23 +58,18 @@ function Chapter() {
                     </div>
                 </div>
                 <div className="row-start-2 mobile:row-start-1 mobile:col-start-2 pt-0 mobile:pt-20 w-full overflow-hidden">
-                    <h1 className="font-aniron text-4xl smallTablet:text-5xl lg:text-6xl" style={{lineHeight: 1.2}}>
+                    <h1 className="font-thesans text-4xl smallTablet:text-5xl lg:text-6xl" style={{lineHeight: 1.2}}>
                         {chapterData.titulo}<br/>
                     </h1>
-                    <h2 className="font-aniron text-3xl smallTablet:text-4xl lg:text-5xl mt-5">{chapterData.nombrePersonaje}</h2>
+                    <h2 className="font-thesans text-3xl smallTablet:text-4xl lg:text-5xl mt-5">{chapterData.nombrePersonaje}</h2>
                     <h3 className="text-base mobile:text-xl font-theserifcaps font-bold mt-6">Description</h3>
-                    <p className="text-sm mobile:text-xl mb-10 pr-6 mobile:pr-0">{chapterData.descripcion}</p>
+                    <p className="text-sm mobile:text-lg mb-10 pr-6 mobile:pr-0">{chapterData.descripcion}</p>
                 </div>
                 <div className="row-start-3 col-start-1 mobile:row-start-2 mobile:col-start-1 mobile:col-span-2">
                     <div className="absolute lg:relative h-44 lg:h-36 flex-1 mb-10 left-1/2 lg:left-0 -ml-50vw lg:ml-0 w-screen lg:w-full" style={{background: '#2f2f2f'}}></div>
                 </div>
                 <div className="row-start-3 col-start-1 mobile:row-start-2 mobile:col-start-1 mobile:col-end-3 smallTablet:row-start-2 smallTablet:col-start-2 z-10 ">
-                    <div className="mobile:h-44 lg:h-36 flex flex-col justify-between lg:justify-start flex-1 p-5 pl-0">
-                        <a rel="noopener noreferrer" target="_blank" href={chapterData.url} className="self-start mobile:self-end flex flex-row items-center justify-between border-2 mt-5 mobile:mt-0 w-5/6 mobile:w-3/5 smallTablet:w-5/6 lg:w-52 2xl:w-60 h-8 cursor-pointer">
-                            <Img alt="OpenSea Logo" className="w-6 ml-5" src={OpenSeaLogo}/>
-                            <h3 className="text-lg font-thesans mr-2">View on OpenSea</h3>
-                        </a>
-                    </div>
+                    {chapterData.descargable == 1 ? <GoogleDriveButton url={chapterData.url}/> : <OpenSeaButton url={chapterData.url}/>}
                 </div>
             </div>
             :
@@ -81,6 +78,27 @@ function Chapter() {
             </svg>
             }
         </>
+    )
+}
+
+function OpenSeaButton(props){
+    return(
+        <div className="mobile:h-44 lg:h-36 flex flex-col justify-between lg:justify-start flex-1 p-5 pl-0">
+            <a rel="noopener noreferrer" target="_blank" href={props.url} className="self-start mobile:self-end flex flex-row items-center justify-between border-2 mt-5 mobile:mt-0 w-5/6 mobile:w-3/5 smallTablet:w-5/6 lg:w-52 2xl:w-60 h-8 cursor-pointer">
+                <Img alt="OpenSea Logo" className="w-6 ml-5" src={OpenSeaLogo}/>
+                <h3 className="text-lg font-thesans mr-2">View on OpenSea</h3>
+            </a>
+        </div>
+    )
+}
+function GoogleDriveButton(props){
+    return(
+        <div className="mobile:h-44 lg:h-36 flex flex-col justify-between lg:justify-start flex-1 p-5 pl-0">
+            <a rel="noopener noreferrer" target="_blank" href={props.url} className="self-start mobile:self-end flex flex-row items-center justify-between border-2 mt-5 mobile:mt-0 w-5/6 mobile:w-3/5 smallTablet:w-5/6 lg:w-52 2xl:w-60 h-8 cursor-pointer">
+                <Img alt="OpenSea Logo" className="w-6 ml-5" src={DriveLogo}/>
+                <h3 className="text-lg font-thesans mr-2">Download on Drive</h3>
+            </a>
+        </div>
     )
 }
 

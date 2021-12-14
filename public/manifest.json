@@ -18,7 +18,7 @@
       "sizes": "512x512"
     }
   ],
-  "start_url": "http://thekheil.com/",
+  "start_url": "https://thekheil.com/",
   "scope": ".",
   "display": "standalone",
   "theme_color": "#000000",

@@ -1,9 +1,9 @@
 {
   "name": "the-keil-app",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": true,
-  "homepage": "https://thekheil.com",
-  "proxy": "https://thekheil.com",
+  "homepage": "https://www.thekheil.com",
+  "proxy": "https://www.thekheil.com",
   "dependencies": {
     "@craco/craco": "^6.2.0",
     "@testing-library/jest-dom": "^5.14.1",

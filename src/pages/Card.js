@@ -51,14 +51,14 @@ function Card() {
                     </div>
                 </div>
                 <div className="row-start-2 mobile:row-start-1 mobile:col-start-2 pt-0 mobile:pt-20 w-full overflow-hidden">
-                    <h1 className="font-aniron text-4xl smallTablet:text-5xl lg:text-6xl" style={{lineHeight: 1.2}}>
+                    <h1 className="font-thesans font-bold text-4xl smallTablet:text-5xl lg:text-6xl">
                         {cardData.titulo}<br/>
                     </h1>
-                    <h2 className="font-aniron text-3xl smallTablet:text-4xl lg:text-5xl mt-5">{cardData.nombrePersonaje}</h2>
+                    <h2 className="font-thesans font-bold text-3xl smallTablet:text-4xl lg:text-5xl mt-5">{cardData.nombrePersonaje}</h2>
 
                     <p className="text-sm mobile:text-base mt-7">{cardData.nombreCarta} Card | Edition of {cardData.stockCarta}</p>
                     <h3 className="text-base mobile:text-xl font-theserifcaps font-bold mt-6">Description</h3>
-                    <p className="text-sm mobile:text-xl mb-10 pr-6 mobile:pr-0">{cardData.descripcion}</p>
+                    <p className="text-sm mobile:text-lg mb-10 pr-6 mobile:pr-0 font-theserif">{cardData.descripcion}</p>
                 </div>
                 <div className="row-start-3 col-start-1 mobile:row-start-2 mobile:col-start-1 mobile:col-span-2">
                     <div className="absolute lg:relative h-44 lg:h-36 flex-1 mb-10 left-1/2 lg:left-0 -ml-50vw lg:ml-0 w-screen lg:w-full" style={{background: '#2f2f2f'}}></div>
